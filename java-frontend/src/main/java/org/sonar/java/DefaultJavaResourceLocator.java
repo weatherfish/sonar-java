@@ -64,7 +64,7 @@ public class DefaultJavaResourceLocator implements JavaResourceLocator {
     String name = className.replace('.', '/');
     InputFile inputFile = resourcesByClass.get(name);
     if (inputFile == null) {
-      LOG.debug("Class not found in resource cache : {}", className);
+      LOG.error("Class not found in resource cache : {}", className);
     }
     return inputFile;
   }
